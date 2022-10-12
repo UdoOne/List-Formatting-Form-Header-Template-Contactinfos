@@ -1,0 +1,381 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "debugMode": true,
+    "elmType": "div",
+    "attributes": {
+        "class": "container"
+    },
+    "style": {
+        "display": "flex",
+        "justify-content": "space-between",
+        "flex-wrap": "wrap",
+        "border-bottom": "#edebe9 solid 2px",
+        "margin-bottom": "20px"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "attributes": {
+                "class": "person-container"
+            },
+            "style": {
+                "display": "flex",
+                "padding": "20px 0px",
+                "min-width": "425px"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "userphoto"
+                    },
+                    "style": {
+                        "display": "flex",
+                        "justify-content": "center",
+                        "height": "150px",
+                        "width": "150px",
+                        "border-radius": "100%",
+                        "overflow": "hidden",
+                        "margin-right": "20px",
+                        "box-shadow": "0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048)"
+                    },
+                    "children": [
+                        {
+                            "elmType": "img",
+                            "attributes": {
+                                "src": "='https://salbei.sharepoint.com/_layouts/15/userphoto.aspx?size=L&username=' + '[$email]'",
+                                "alt": ""
+                            },
+                            "style": {
+                                "height": "100%",
+                                "width": "auto"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "userprops"
+                    },
+                    "style": {
+                        "margin": "auto 0px 0px 0px"
+                    },
+                    "children": [
+                        {
+                            "elmType": "div",
+                            "attributes": {
+                                "class": "ms-fontSize-32"
+                            },
+                            "txtContent": "=[$givenName] + ' ' + [$surname]"
+                        },
+                        {
+                            "elmType": "div",
+                            "attributes": {
+                                "class": "ms-fontSize-18 ms-fontColor-neutralSecondary ms-fontSize-32--hover"
+                            },
+                            "txtContent": "=[$jobTitle]"
+                        },
+                        {
+                            "elmType": "div",
+                            "attributes": {
+                                "class": "location-container"
+                            },
+                            "style": {
+                                "padding-top": "17px"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "div",
+                                    "attributes": {
+                                        "class": "company ms-fontSize-16 ms-fontColor-neutralSecondary"
+                                    },
+                                    "style": {
+                                        "display": "flex",
+                                        "justify-content": "flex-start",
+                                        "align-items": "center"
+                                    },
+                                    "children": [
+                                        {
+                                            "elmType": "div",
+                                            "attributes": {
+                                                "iconName": "HomeSolid"
+                                            },
+                                            "style": {
+                                                "font-size": "14px",
+                                                "padding-top": "3px"
+                                            }
+                                        },
+                                        {
+                                            "elmType": "div",
+                                            "style": {
+                                                "padding-left": "5px"
+                                            },
+                                            "txtContent": "=[$company]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elmType": "div",
+                                    "attributes": {
+                                        "class": "location ms-fontSize-16 ms-fontColor-neutralSecondary"
+                                    },
+                                    "style": {
+                                        "display": "flex",
+                                        "justify-content": "flex-start",
+                                        "align-items": "center"
+                                    },
+                                    "children": [
+                                        {
+                                            "elmType": "div",
+                                            "attributes": {
+                                                "iconName": "Location"
+                                            },
+                                            "style": {
+                                                "font-size": "14px",
+                                                "padding-top": "4px"
+                                            }
+                                        },
+                                        {
+                                            "elmType": "div",
+                                            "style": {
+                                                "padding-left": "5px"
+                                            },
+                                            "txtContent": "=[$city]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "attributes": {
+                "class": "button-container"
+            },
+            "style": {
+                "display": "flex",
+                "justify-content": "space-between",
+                "width": "350px",
+                "padding": "20px 0px"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "link-container"
+                    },
+                    "children": [
+                        {
+                            "elmType": "a",
+                            "attributes": {
+                                "href": "='https://salbei.sharepoint.com/_layouts/15/me.aspx/?p=' + [$email] + '&v=work'",
+                                "target": "_blank",
+                                "class": "ms-fontColor-neutralPrimaryAlt ms-fontColor-neutralSecondaryAlt--hover"
+                            },
+                            "style": {
+                                "font-size": "28px",
+                                "color": "=if([$email] == '', 'rgba(220,220,220)', '')",
+                                "cursor": "=if([$email] == '', 'not-allowed', 'pointer')"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "span",
+                                    "attributes": {
+                                        "iconName": "DelveLogo"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "link-container"
+                    },
+                    "children": [
+                        {
+                            "elmType": "a",
+                            "attributes": {
+                                "href": "='https://teams.microsoft.com/l/chat/0/0?users=' + [$email]",
+                                "target": "_blank",
+                                "class": "ms-fontColor-neutralPrimaryAlt ms-fontColor-neutralSecondaryAlt--hover"
+                            },
+                            "style": {
+                                "font-size": "28px",
+                                "color": "=if([$email] == '', 'rgba(220,220,220)', '')",
+                                "cursor": "=if([$email] == '', 'not-allowed', 'pointer')"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "span",
+                                    "attributes": {
+                                        "iconName": "OfficeChat"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "link-container"
+                    },
+                    "children": [
+                        {
+                            "elmType": "a",
+                            "attributes": {
+                                "href": "=if([$telephoneNumber] == '', '', 'tel:' + [$telephoneNumber])",
+                                "target": "_blank",
+                                "class": "ms-fontColor-neutralPrimaryAlt ms-fontColor-neutralSecondaryAlt--hover"
+                            },
+                            "style": {
+                                "font-size": "28px",
+                                "color": "=if([$telephoneNumber] == '', 'rgba(220,220,220)', '')",
+                                "cursor": "=if([$telephoneNumber] == '', 'not-allowed', 'pointer')"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "span",
+                                    "attributes": {
+                                        "iconName": "Phone"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "link-container"
+                    },
+                    "children": [
+                        {
+                            "elmType": "a",
+                            "attributes": {
+                                "href": "=if([$mobilePhone] == '', '', 'tel:' + [$mobilePhone])",
+                                "target": "_blank",
+                                "class": "ms-fontColor-neutralPrimaryAlt ms-fontColor-neutralSecondaryAlt--hover"
+                            },
+                            "style": {
+                                "font-size": "28px",
+                                "color": "=if([$mobilePhone] == '', 'rgba(220,220,220)', '')",
+                                "cursor": "=if([$mobilePhone] == '', 'not-allowed', 'pointer')"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "span",
+                                    "attributes": {
+                                        "iconName": "CellPhone"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "link-container"
+                    },
+                    "children": [
+                        {
+                            "elmType": "a",
+                            "attributes": {
+                                "href": "='mailto:' + [$email]",
+                                "target": "_blank",
+                                "class": "ms-fontColor-neutralPrimaryAlt ms-fontColor-neutralSecondaryAlt--hover"
+                            },
+                            "style": {
+                                "font-size": "28px",
+                                "color": "=if([$email] == '', 'rgba(220,220,220)', '')",
+                                "cursor": "=if([$email] == '', 'not-allowed', 'pointer')"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "span",
+                                    "attributes": {
+                                        "iconName": "Mail"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "link-container"
+                    },
+                    "children": [
+                        {
+                            "elmType": "a",
+                            "attributes": {
+                                "href": "='https://teams.microsoft.com/l/meeting/new?subject=Teams Meeting&attendees=' + [$email] + '&message=Teams Meeting'",
+                                "target": "_blank",
+                                "class": "ms-fontColor-neutralPrimaryAlt ms-fontColor-neutralSecondaryAlt--hover"
+                            },
+                            "style": {
+                                "font-size": "28px",
+                                "color": "=if([$email] == '', 'rgba(220,220,220)', '')",
+                                "cursor": "=if([$email] == '', 'not-allowed', 'pointer')"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "span",
+                                    "attributes": {
+                                        "iconName": "JoinOnlineMeeting"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "attributes": {
+                "class": "logo-container"
+            },
+            "style": {
+                "background-color": "white",
+                "display": "flex",
+                "padding": "20px 100px 20px 0px"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "class": "logo"
+                    },
+                    "style": {
+                        "display": "flex",
+                        "max-width": "400px",
+                        "max-height": "70px"
+                    },
+                    "children": [
+                        {
+                            "elmType": "img",
+                            "attributes": {
+                                "src": "=if([$company] == 'Gulp', 'https://salbei.sharepoint.com/sites/mainhubsite/spfxlogos/gulp.png',if([$company] == 'Yeoman', 'https://salbei.sharepoint.com/sites/mainhubsite/spfxlogos/yeoman.png',if([$company] == 'TypeScript', 'https://salbei.sharepoint.com/sites/mainhubsite/spfxlogos/typescript.png',if([$company] == 'npm', 'https://salbei.sharepoint.com/sites/mainhubsite/spfxlogos/npm.png',''))))",
+                                "alt": "[$company]"
+                            },
+                            "style": {
+                                "height": "100%",
+                                "width": "auto",
+                                "margin": "auto 0"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
