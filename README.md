@@ -9,4 +9,4 @@ The icon-group contains o365 deep-links and links with mail- & tel-attributes to
 - send an email
 - plan a teams-meeting
 
-![Form Header Gif](https://github.com/UdoOne/List-Formatting-Form-Header-Template-Contactlist/blob/master/List-Formatting-Form-Header-Contactinfos.gif)
+![Form Header Gif](https://github.com/UdoOne/List-Formatting-Form-Header-Template-Contactinfos/blob/main/List-Formatting-Form-Header-Contactinfos.gif)
