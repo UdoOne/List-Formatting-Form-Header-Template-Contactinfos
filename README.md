@@ -1,4 +1,4 @@
-# Sharepoint List Form Header for Contact-Infos
+# SharePoint List Form Header for Contact-Infos
 Clean header for sharepoint list-froms, which shows all important contact-infos from a person including the profile image and company logo. 
 
 The icon-group contains o365 deep-links and links with mail- & tel-attributes to get directly in touch:
